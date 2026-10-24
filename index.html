@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#f5f7f4">
+  <title>Авторская стоматология Ступникова | Демо-концепт</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #192b29;
+      --muted: #61716c;
+      --green: #245b4d;
+      --green-dark: #173e36;
+      --mint: #dcebe3;
+      --paper: #f5f7f4;
+      --line: #d9e1dc;
+      --white: #fff;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); }
+    a { color: inherit; }
+    .demo-notice {
+      padding: 10px 16px;
+      color: #fff;
+      background: var(--green-dark);
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    .site-header, main, footer { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .site-header {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid #a8c3b5;
+      border-radius: 50%;
+      color: var(--green);
+      font-family: Georgia, serif;
+      font-size: 22px;
+    }
+    .brand-name { font-family: Georgia, "Times New Roman", serif; font-size: 18px; }
+    .header-note { color: var(--muted); font-size: 13px; }
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+      align-items: center;
+      gap: clamp(32px, 7vw, 88px);
+      padding-block: 76px 72px;
+    }
+    .eyebrow { margin: 0 0 18px; color: var(--green); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+    h1, h2, p { margin-top: 0; }
+    h1 { max-width: 610px; margin-bottom: 20px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(38px, 5vw, 62px); font-weight: 400; line-height: 1.06; }
+    .lead { max-width: 450px; margin-bottom: 30px; color: var(--muted); font-size: 17px; line-height: 1.65; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 19px;
+      border: 1px solid var(--green);
+      border-radius: 3px;
+      background: var(--green);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 650;
+      text-decoration: none;
+      transition: background .18s ease, border-color .18s ease;
+    }
+    .button:hover { background: var(--green-dark); border-color: var(--green-dark); }
+    .button.secondary { background: transparent; color: var(--green); }
+    .button.secondary:hover { background: var(--mint); }
+    .button svg { width: 17px; height: 17px; flex: none; }
+    .visual {
+      position: relative;
+      min-height: 390px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #e5eee8, #cadbd0);
+    }
+    .visual-inner { position: absolute; inset: 0; display: grid; place-items: center; }
+    .tooth { display: block; width: 176px; height: 210px; filter: drop-shadow(0 18px 20px rgba(32, 70, 57, .16)); }
+    .visual-caption { position: absolute; left: 16px; bottom: 16px; padding: 9px 12px; background: rgba(255,255,255,.94); color: var(--ink); font-size: 12px; }
+    .details {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+      gap: 54px;
+      padding-block: 35px 72px;
+      border-top: 1px solid var(--line);
+    }
+    h2 { margin-bottom: 20px; font-family: Georgia, "Times New Roman", serif; font-size: 28px; font-weight: 400; }
+    .hours { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .hours th, .hours td { padding: 13px 0; border-bottom: 1px solid var(--line); text-align: left; }
+    .hours th { color: var(--muted); font-weight: 500; }
+    .hours td { text-align: right; font-weight: 600; }
+    .map-frame { width: 100%; height: 260px; display: block; border: 0; background: #e4eae5; }
+    .map-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 12px; color: var(--green); font-size: 14px; font-weight: 650; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .map-link svg { width: 16px; height: 16px; }
+    .photos { padding-block: 0 62px; }
+    .photos h2 { margin-bottom: 18px; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .photo-item { min-width: 0; margin: 0; }
+    .photo-item a { display: block; overflow: hidden; background: var(--mint); }
+    .photo-item img { display: block; width: 100%; height: 100%; min-height: 210px; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .25s ease; }
+    .photo-item img { aspect-ratio: 4 / 3; }
+    .photo-item a:hover img { transform: scale(1.025); }
+    .photo-item figcaption { padding-top: 8px; color: var(--muted); font-size: 12px; }
+    .reviews { padding-block: 34px 64px; border-top: 1px solid var(--line); }
+    .reviews-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 20px; }
+    .reviews-heading h2 { margin-bottom: 0; }
+    .rating { color: var(--muted); font-size: 13px; white-space: nowrap; }
+    .rating strong { color: var(--ink); font-size: 17px; }
+    .review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .review { padding-top: 14px; border-top: 2px solid #a8c3b5; }
+    .review p { margin: 0; color: #40514c; font-size: 14px; line-height: 1.65; }
+    footer { padding-block: 22px 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; line-height: 1.5; }
+    @media (max-width: 720px) {
+      .site-header, main, footer { width: min(100% - 32px, 540px); }
+      .site-header { min-height: 70px; }
+      .brand-name { max-width: 220px; font-size: 16px; }
+      .header-note { display: none; }
+      .intro { grid-template-columns: 1fr; gap: 30px; padding-block: 48px 46px; }
+      h1 { max-width: 480px; font-size: 43px; }
+      .lead { font-size: 16px; }
+      .visual { min-height: 285px; }
+      .tooth { width: 146px; height: 174px; }
+      .details { grid-template-columns: 1fr; gap: 38px; padding-block: 30px 48px; }
+      .map-frame { height: 230px; }
+      .photos { padding-bottom: 48px; }
+      .photo-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .photo-item img { min-height: 124px; aspect-ratio: 1 / 1; }
+      .photo-item figcaption { font-size: 11px; }
+      .reviews { padding-block: 28px 48px; }
+      .reviews-heading { align-items: start; flex-direction: column; gap: 8px; }
+      .review-grid { grid-template-columns: 1fr; gap: 18px; }
+    }
+    @media (max-width: 390px) {
+      .brand-name { max-width: 190px; font-size: 14px; }
+      h1 { font-size: 38px; }
+      .actions { display: grid; grid-template-columns: 1fr; }
+      .button { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <div class="demo-notice">Демо-концепт, не официальный сайт, удалим по первой просьбе</div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Авторская стоматология Ступникова, главная">
+      <span class="brand-mark" aria-hidden="true">С</span>
+      <span class="brand-name">Авторская стоматология Ступникова</span>
+    </a>
+    <span class="header-note">Петрозаводск</span>
+  </header>
+  <main id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Стоматология · Петрозаводск</p>
+        <h1 id="page-title">Авторская стоматология Ступникова</h1>
+        <p class="lead">Информация о расположении и графике работы.</p>
+        <div class="actions">
+          <a class="button" href="https://yandex.ru/maps/org/avtorskaya_stomatologiya_stupnikova/15044376487/?ll=34.373069%2C61.765445&amp;z=17.11" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.8"/></svg>
+            Открыть в Яндекс Картах
+          </a>
+          <a class="button secondary" href="#hours">График работы</a>
+        </div>
+      </div>
+      <div class="visual" aria-hidden="true">
+        <div class="visual-inner">
+          <svg class="tooth" viewBox="0 0 320 380" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="enamel" x1="64" y1="42" x2="258" y2="338" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#ffffff"/>
+                <stop offset=".48" stop-color="#f8fcfa"/>
+                <stop offset="1" stop-color="#dcece5"/>
+              </linearGradient>
+              <linearGradient id="rightShade" x1="170" y1="115" x2="260" y2="270" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#d8e9e1" stop-opacity="0"/>
+                <stop offset="1" stop-color="#a9c8ba" stop-opacity=".58"/>
+              </linearGradient>
+              <radialGradient id="crownGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(105 90) rotate(57) scale(124 101)">
+                <stop stop-color="#ffffff" stop-opacity=".96"/>
+                <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="toothShadow" x="-30%" y="-15%" width="160%" height="145%" color-interpolation-filters="sRGB">
+                <feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#527568" flood-opacity=".22"/>
+              </filter>
+              <clipPath id="toothShape">
+                <path d="M160 48C144 29 113 25 91 45 76 29 49 29 32 46 13 64 20 95 32 122c13 29 21 58 25 92 4 34 2 77 15 108 6 15 17 21 27 10 13-15 18-52 27-80 7-22 17-34 34-34s27 12 34 34c9 28 14 65 27 80 10 11 21 5 27-10 13-31 11-74 15-108 4-34 12-63 25-92 12-27 19-58 0-76-17-17-44-17-59-1-22-20-53-16-69 3Z"/>
+              </clipPath>
+            </defs>
+            <ellipse cx="160" cy="350" rx="86" ry="13" fill="#86aa9b" opacity=".18"/>
+            <path d="M160 48C144 29 113 25 91 45 76 29 49 29 32 46 13 64 20 95 32 122c13 29 21 58 25 92 4 34 2 77 15 108 6 15 17 21 27 10 13-15 18-52 27-80 7-22 17-34 34-34s27 12 34 34c9 28 14 65 27 80 10 11 21 5 27-10 13-31 11-74 15-108 4-34 12-63 25-92 12-27 19-58 0-76-17-17-44-17-59-1-22-20-53-16-69 3Z" fill="url(#enamel)" stroke="#a8c7b9" stroke-width="5" stroke-linejoin="round" filter="url(#toothShadow)"/>
+            <g clip-path="url(#toothShape)">
+              <path d="M161 58c41 27 76 91 87 158 8 49-4 119-27 144-13 14-38-45-46-78-6-25-15-40-15-40Z" fill="url(#rightShade)"/>
+              <ellipse cx="102" cy="85" rx="80" ry="70" fill="url(#crownGlow)"/>
+              <path d="M43 88c16-20 43-31 66-28 21 3 31 18 45 34 12 14 24 14 36 0 14-16 24-31 45-34 23-3 50 8 66 28" stroke="#c5ddd3" stroke-width="5" stroke-linecap="round" opacity=".86"/>
+              <path d="M39 121c28-15 58-13 81 4 19 14 22 28 40 28s21-14 40-28c23-17 53-19 81-4" stroke="#d0e4dc" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+              <path d="M73 68c-14 13-21 31-23 51" stroke="#ffffff" stroke-width="13" stroke-linecap="round" opacity=".72"/>
+              <path d="M105 248c-3 27-8 57-18 78" stroke="#b4d1c4" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+              <path d="M215 247c5 30 10 59 20 78" stroke="#8fb6a6" stroke-width="5" stroke-linecap="round" opacity=".38"/>
+            </g>
+            <path d="M160 48C144 29 113 25 91 45 76 29 49 29 32 46 13 64 20 95 32 122c13 29 21 58 25 92 4 34 2 77 15 108 6 15 17 21 27 10 13-15 18-52 27-80 7-22 17-34 34-34s27 12 34 34c9 28 14 65 27 80 10 11 21 5 27-10 13-31 11-74 15-108 4-34 12-63 25-92 12-27 19-58 0-76-17-17-44-17-59-1-22-20-53-16-69 3Z" stroke="#a8c7b9" stroke-width="5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="visual-caption">Авторская стоматология</span>
+      </div>
+    </section>
+    <section class="photos" aria-labelledby="photos-title">
+      <h2 id="photos-title">Фото организации</h2>
+      <div class="photo-grid">
+        <figure class="photo-item">
+          <a href="https://yandex.ru/maps/org/avtorskaya_stomatologiya_stupnikova/15044376487/" target="_blank" rel="noopener noreferrer" aria-label="Открыть карточку организации в Яндекс Картах">
+            <img src="https://avatars.mds.yandex.net/get-altay/19303228/2a0000019e455f6c1c54963683cc26629004/XXL_height" alt="Фото стоматологической клиники из карточки Яндекс Карт" loading="lazy">
+          </a>
+          <figcaption>Фото организации · Яндекс Карты</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <a href="https://yandex.ru/maps/org/avtorskaya_stomatologiya_stupnikova/15044376487/" target="_blank" rel="noopener noreferrer" aria-label="Открыть карточку организации в Яндекс Картах">
+            <img src="https://avatars.mds.yandex.net/get-altay/12838938/2a000001922e38159050e9e7fbb0e4f59e0b/XXL_height" alt="Фото стоматологической клиники из карточки Яндекс Карт" loading="lazy">
+          </a>
+          <figcaption>Фото организации · Яндекс Карты</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <a href="https://yandex.ru/maps/org/avtorskaya_stomatologiya_stupnikova/15044376487/" target="_blank" rel="noopener noreferrer" aria-label="Открыть карточку организации в Яндекс Картах">
+            <img src="https://avatars.mds.yandex.net/get-altay/20390960/2a0000019e4563a2cefc8e02b4933ac74ed4/XXL_height" alt="Фото стоматологической клиники из карточки Яндекс Карт" loading="lazy">
+          </a>
+          <figcaption>Фото организации · Яндекс Карты</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="details" aria-label="Практическая информация">
+      <div id="hours">
+        <h2>График работы</h2>
+        <table class="hours">
+          <tbody>
+            <tr><th scope="row">Понедельник — пятница</th><td>09:00 — 21:00</td></tr>
+            <tr><th scope="row">Суббота — воскресенье</th><td>Выходной</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h2>На карте</h2>
+        <iframe class="map-frame" title="Расположение стоматологии на Яндекс Картах" src="https://yandex.ru/map-widget/v1/?ll=34.373069%2C61.765445&amp;z=16&amp;pt=34.373069%2C61.765445%2Cpm2rdm" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <a class="map-link" href="https://yandex.ru/maps/org/avtorskaya_stomatologiya_stupnikova/15044376487/?ll=34.373069%2C61.765445&amp;z=17.11" target="_blank" rel="noopener noreferrer">
+          Смотреть карточку организации
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+    <section class="reviews" aria-labelledby="reviews-title">
+      <div class="reviews-heading">
+        <h2 id="reviews-title">Отзывы пациентов</h2>
+        <div class="rating"><strong>5,0</strong> · 206 оценок в Яндекс Картах</div>
+      </div>
+      <div class="review-grid">
+        <article class="review"><p>В отзывах отмечают внимательное отношение специалистов, аккуратное проведение процедур и подробные объяснения во время приёма.</p></article>
+        <article class="review"><p>Пациенты пишут, что им объясняют состояние зубов, последовательность лечения и дают рекомендации по дальнейшему уходу.</p></article>
+        <article class="review"><p>В отзывах также упоминают доброжелательное общение и помощь сотрудников клиники с организацией визита.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer>Демо-концепт, не официальный сайт. Информация о бизнесе взята из открытой карточки на Яндекс Картах.</footer>
+</body>
+</html>
